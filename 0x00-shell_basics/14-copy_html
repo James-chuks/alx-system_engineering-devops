@@ -1,26 +1,2 @@
 #!/bin/bash
-
-# This will Get the current working directory
-current_working_dir=$(pwd)
-
-# Get the parent directory of the current working directory
-parent_dir=$(dirname $current_working_dir)
-
-# Get all HTML files in the current directory
-html_files=$(find $current_dir -type f -name "*.html")
-
-# For each HTML file, we can use this line to check if it exists in the parent directory
-for html_file in $html_files; do
-
-# This will then Get the file path in the parent directory
-parent_file_path="$parent_dir/$html_file"
-
-# Now to Check if the file exists in the parent directory
-if [ ! -f "$parent_file_path" ] || [ "$html_file" -nt "$parent_file_path" ]; then
-
-# The file does not exist in the parent directory, or the current version is newer, so copy it
-cp "$html_file" "$parent_dir"
-
-fi
-
-done
+cp -un *.html ../
