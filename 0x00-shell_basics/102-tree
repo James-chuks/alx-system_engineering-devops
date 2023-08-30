@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -xamp
+mkdir welcome/ welcome/to/ welcome/to/school
