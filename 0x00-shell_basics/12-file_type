@@ -1,2 +1,7 @@
 #!/bin/bash
-file
+
+# Get the file type
+file_type=$(file /tmp/iamafile)
+
+# Print the file type
+echo $file_type
