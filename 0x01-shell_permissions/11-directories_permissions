@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R o+x julien
+chmod ugo+x ./*
