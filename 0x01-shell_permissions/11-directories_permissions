@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo+X ./*julien
+chmod a+X *
