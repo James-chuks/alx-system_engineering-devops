@@ -1,0 +1,15 @@
+
+#!/usr/bin/env bash
+
+# Update the package manager
+sudo apt-get update
+
+# Install Nginx
+sudo apt-get install -y nginx
+
+# Configure Nginx to include the X-Served-By header
+sudo sed -i 's|# server_tokens off;|server_tokens off;\n        add_header X-Served-By $hostname;|' /etc/nginx/nginx.conf
+
+# Restart Nginx to apply the changes
+sudo service nginx restart
+
